@@ -2,9 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/app.js",
   "scripts": {
     "build": "tsc --p tsconfig.json",
+    "dev": "ts-node-dev",
+    "prestart": "npm run build",
+    "start": "node dist/app.js",
     "lint": "eslint src/**/*.ts"
   },
   "engines": {
@@ -20,38 +23,5 @@
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2",
     "typescript": "^4.4.3"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.31.2",
-    "@typescript-eslint/parser": "^4.31.2",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "es2020": true,
-      "node": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "prettier"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "@typescript-eslint/eslint-plugin"
-    ],
-    "rules": {
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off"
-    }
   }
 }

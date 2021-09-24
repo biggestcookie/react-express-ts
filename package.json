@@ -1,7 +1,13 @@
 {
   "name": "react-express-ts",
   "scripts": {
-    "postinstall": "npm --prefix ./client install && npm --prefix ./server install"
+    "postinstall": "npm --prefix ./client install && npm --prefix ./server install",
+    "dev:client": "npm --prefix ./client run dev",
+    "dev:server": "npm --prefix ./server run dev",
+    "build": "npm --prefix ./client run build && npm --prefix ./server run build",
+    "lint:fix": "eslint ./ --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "lint:format && lint:fix "
   },
   "dependencies": {
     "@types/node": "^14.17.18",
@@ -18,26 +24,29 @@
   "eslintConfig": {
     "root": true,
     "env": {
-      "es2020": true,
       "node": true
     },
     "parser": "@typescript-eslint/parser",
     "extends": [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
       "prettier"
     ],
     "parserOptions": {
       "ecmaVersion": 2020,
-      "sourceType": "module"
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
     },
     "plugins": [
       "@typescript-eslint/eslint-plugin"
     ],
     "rules": {
       "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off"
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     }
   }
 }
