@@ -1,17 +1,17 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "npm: dev - client",
-			"detail": "vite dev",
-			"type": "npm",
-			"script": "dev",
-			"path": "client/",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"problemMatcher": "$tsc-watch"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: dev - client",
+      "detail": "vite dev",
+      "type": "npm",
+      "script": "dev",
+      "path": "client/",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$tsc-watch"
+    }
+  ]
 }
