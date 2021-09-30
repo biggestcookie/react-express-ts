@@ -1,4 +1,3 @@
-import "module-alias/register";
 import { API_PREFIX } from "@shared/constants";
 import express, { json, urlencoded } from "express";
 import speedrunRoutes from "./routes/speedruns";

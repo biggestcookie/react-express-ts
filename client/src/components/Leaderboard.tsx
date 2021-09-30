@@ -77,6 +77,8 @@ export default function Leaderboard(props: { totalTime: number }) {
               pattern="[A-Za-z0-9]+"
               name="username"
               placeholder="Enter your username "
+              autoComplete="off"
+              autoFocus
               required
             />
           </div>

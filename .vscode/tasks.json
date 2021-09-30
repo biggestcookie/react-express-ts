@@ -12,7 +12,7 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated",
-        "showReuseMessage": false,
+        "showReuseMessage": true,
         "clear": false,
         "group": "dev"
       },
@@ -29,7 +29,7 @@
         "reveal": "always",
         "focus": false,
         "panel": "dedicated",
-        "showReuseMessage": false,
+        "showReuseMessage": true,
         "clear": false,
         "group": "dev"
       },
@@ -48,7 +48,7 @@
         "reveal": "silent",
         "focus": false,
         "panel": "dedicated",
-        "showReuseMessage": false,
+        "showReuseMessage": true,
         "clear": false,
         "group": "build"
       }
@@ -66,7 +66,7 @@
         "reveal": "silent",
         "focus": false,
         "panel": "dedicated",
-        "showReuseMessage": false,
+        "showReuseMessage": true,
         "clear": false,
         "group": "build"
       }

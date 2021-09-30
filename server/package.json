@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "build": "tsc --p tsconfig.json",
-    "dev": "ts-node-dev --inspect --transpile-only src/app.ts",
+    "build": "tsc --p tsconfig.json && tscpaths -p tsconfig.json -s ../ -o ./dist",
+    "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only src/app.ts",
     "prestart": "npm run build",
     "start": "node dist/server/src/app.js",
     "lint": "eslint src/**/*.ts"
@@ -19,15 +19,13 @@
     "@types/validator": "^13.6.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "module-alias": "^2.2.2",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2",
+    "tscpaths": "^0.0.9",
     "typescript": "^4.4.3"
   },
   "devDependencies": {
-    "ts-node-dev": "^1.1.8"
-  },
-  "_moduleAliases": {
-    "@shared": "dist/shared"
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0"
   }
 }
